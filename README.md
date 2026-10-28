@@ -21,5 +21,5 @@ Website ini tampil rapi di ponsel, tablet, dan laptop.
 - VS Code dan Live Server
 ## Tautan
 
-- Website: https://portofolio-fadli-pearl.vercel.app/
+- Website: https://portofolio-arjuna-052.vercel.app/
 - Dibuat oleh:Arjuna prananda imam maulana, SMKN 1 PASURUAN# portofolio-arjuna
