@@ -1,4 +1,4 @@
-# portofolio-fadli
+# portofolio-arjuna
 
 Website portofolio pribadi yang saya buat di Kelas Industri UBIG 
 (Paket 1, Minggu 01 sampai 05).
