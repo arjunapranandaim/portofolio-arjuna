@@ -1,43 +1,38 @@
-// Tantangan: Hitung rata-rata nilai tugas, UTS, dan UAS
-/**
- * Calculates the average of assignment, midterm, and final scores.
- * @param {number} tugas - Assignment score.
- * @param {number} uts - Midterm exam score.
- * @param {number} uas - Final exam score.
- * @returns {number} The average of the three scores.
- */
-const hitungRataRata = (tugas, uts, uas) => (tugas + uts + uas) / 3;
-// Tantangan: Tentukan predikat dari rata-rata nilai
-/**
- * Determines the predicate label based on the average score.
- * @param {number} rataRata - The average score (0–100).
- * @returns {"A" | "B" | "C" | "D" | "E"} The predicate label.
- */
-const predikat = (rataRata) => {
-  if (rataRata >= 90) return "A";
-  if (rataRata >= 80) return "B";
-  if (rataRata >= 70) return "C";
-  if (rataRata >= 60) return "D";
-  return "E";
-};
-const form = document.getElementById("form");
-const resultElement = document.getElementById("result");
+// Menghitung rata-rata nilai
+function hitungRataRata(tugas, uts, uas) {
+  return (tugas + uts + uas) / 3;
+}
 
-form.addEventListener('submit', (e) => {
+// Menentukan predikat nilai
+function predikat(nilai) {
+  if (nilai >= 90) {
+    return "A";
+  } else if (nilai >= 80) {
+    return "B";
+  } else if (nilai >= 70) {
+    return "C";
+  } else if (nilai >= 60) {
+    return "D";
+  } else {
+    return "E";
+  }
+}
+
+// Mengambil form dan hasil
+const form = document.getElementById("form");
+const result = document.getElementById("result");
+
+// Ketika tombol hitung ditekan
+form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const { tugas, uts, uas } = e.target.elements;
-  const nTugas = Number(tugas.value);
-  const nUts = Number(uts.value);
-  const nUas = Number(uas.value);
+  const tugas = Number(document.getElementById("tugas").value);
+  const uts = Number(document.getElementById("uts").value);
+  const uas = Number(document.getElementById("uas").value);
 
-  const rataRata = hitungRataRata(nTugas, nUts, nUas);
-  const pred = predikat(rataRata);
+  const rataRata = hitungRataRata(tugas, uts, uas);
+  const hasil = predikat(rataRata);
 
-  resultElement.innerText =
-    `Rata-rata: ${rataRata.toFixed(2)} | Predikat: ${pred}`;
-
-  console.log(
-    `tugas=${nTugas}, uts=${nUts}, uas=${nUas} → rata-rata=${rataRata.toFixed(2)}, predikat=${pred}`
-  );
+  result.innerText = "Rata-rata: " + rataRata.toFixed(2) +
+                     " | Predikat: " + hasil;
 });
