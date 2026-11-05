@@ -1,38 +1,47 @@
-// Menghitung rata-rata nilai
-function hitungRataRata(tugas, uts, uas) {
-  return (tugas + uts + uas) / 3;
-}
+const inputTugas = document.querySelector("#tugas");
+const inputUts = document.querySelector("#uts");
+const inputUas = document.querySelector("#uas");
 
-// Menentukan predikat nilai
-function predikat(nilai) {
-  if (nilai >= 90) {
+const tombol = document.querySelector("#hitung");
+const hasil = document.querySelector("#hasil");
+
+const hitungRataRata = (tugas, uts, uas) => {
+  return (tugas + uts + uas) / 3;
+};
+
+function predikat(rataRata) {
+  if (rataRata >= 90) {
     return "A";
-  } else if (nilai >= 80) {
+  } else if (rataRata >= 80) {
     return "B";
-  } else if (nilai >= 70) {
+  } else if (rataRata >= 70) {
     return "C";
-  } else if (nilai >= 60) {
+  } else if (rataRata >= 60) {
     return "D";
   } else {
     return "E";
   }
-}
+};
 
-// Mengambil form dan hasil
 const form = document.getElementById("form");
-const result = document.getElementById("result");
+const result = document.getElementById("hasil");
 
-// Ketika tombol hitung ditekan
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const tugas = Number(document.getElementById("tugas").value);
-  const uts = Number(document.getElementById("uts").value);
-  const uas = Number(document.getElementById("uas").value);
+  const tugas = Number(form.elements.tugas.value);
+  const uts = Number(form.elements.uts.value);
+  const uas = Number(form.elements.uas.value);
 
   const rataRata = hitungRataRata(tugas, uts, uas);
-  const hasil = predikat(rataRata);
+  const hasilPredikat = predikat(rataRata);
 
   result.innerText = "Rata-rata: " + rataRata.toFixed(2) +
-                     " | Predikat: " + hasil;
+    " | Predikat: " + hasilPredikat;
+
+  console.log("Nilai Tugas:", tugas);
+  console.log("Nilai UTS:", uts);
+  console.log("Nilai UAS:", uas);
+  console.log("Rata-rata:", rataRata.toFixed(2));
+  console.log("Predikat:", hasilPredikat);
 });
