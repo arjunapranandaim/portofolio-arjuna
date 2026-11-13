@@ -1,68 +1,85 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>arjuna | Beranda</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/latihan.js"></script>
-  <script src="js/logika.js" defer></script>
-</head>
-<body>
-  <header>
-    <div class="container navbar">
-      <h1>arjuna</h1>
-      <nav class="menu-laptop">
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="proyek.html">Proyek</a></li>
-          <li><a href="kontak.html">Kontak</a></li>
-          <li><a href="kalkulator.html">Kalkulator</a></li>
-        </ul>
-      </nav>
-      <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
-      <details class="menu-ponsel">
-        <summary>Menu</summary>
-        <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angger | Beranda</title>
+    <link rel="icon" href="img/p1.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <h1>Angger Raditya Permata</h1>
+        <nav class="menu-laptop">
           <ul>
             <li><a href="index.html">Beranda</a></li>
             <li><a href="proyek.html">Proyek</a></li>
             <li><a href="kontak.html">Kontak</a></li>
-            <li><a href="kalkulator.html">Kalkulator</a></li>
+            <li><a href="kalkulator.html">Kalkulator Nilai</a></li>
           </ul>
         </nav>
-      </details>
-    </div>
-  </header>
 
-  <main>
-    <div class="container">
-      <section class="hero">
-        <img src="img/foto-profil.jpeg" alt="Foto profil arjuna" width="180">
-        <div>
-          <h2>Halo, saya arjuna!</h2>
-          <p>Siswa kelas X SMK, calon Junior Web Developer di Kelas Industri UBIG.</p>
-          <a href="proyek.html" class="tombol">Lihat Proyek Saya</a>
-        </div>
-      </section>
+        <button type="button" id="tombol-tema" class="tombol-tema">
+          Mode Gelap
+        </button>
+        <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
+        <details class="menu-ponsel">
+          <summary>Menu</summary>
+          <nav>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="proyek.html">Proyek</a></li>
+              <li><a href="kontak.html">Kontak</a></li>
+              <li><a href="kalkulator.html">Kalkulator Nilai</a></li>
+            </ul>
+          </nav>
+        </details>
+      </div>
+    </header>
 
-      <section class="kartu">
-        <h2>Tentang Saya</h2>
-        <p>Saya tinggal di Malang dan senang mencoba hal baru di dunia teknologi. Saya ingin bisa membuat website yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.</p>
-      </section>
-
-      <div class="daftar-kartu">
-        <section class="kartu">
-          <h2>Hobi</h2>
-          <ul>
-            <li>Bermain futsal</li>
-            <li>Membaca komik</li>
-            <li>Mendesain poster</li>
-          </ul>
+    <main>
+      <div class="container">
+        <section class="hero">
+          <img
+            src="img/p1.jpeg"
+            alt="Foto profil Angger Raditya Permata"
+            width="180"
+          />
+          <div>
+            <h2>Halo, saya Angger!</h2>
+            <p>
+              Siswa kelas X SMK, calon Junior Web Developer di Kelas Industri
+              UBIG.
+            </p>
+            <a href="proyek.html" class="tombol">Lihat Proyek Saya</a>
+          </div>
         </section>
+
+        <section class="kartu">
+          <h2>Tentang Saya</h2>
+          <p>
+            Siswa kelas 10 Rekayasa Perangkat Lunak yang berfokus mendalami
+            arsitektur Front-End modern, tata letak CSS Flexbox, serta prinsip
+            Mobile-First Responsive Design standar industri.
+          </p>
+        </section>
+
+        <div class="daftar-kartu">
+          <section class="kartu">
+            <h2>Hobi</h2>
+            <ul>
+              <li>Bermain game</li>
+              <li>Berlari</li>
+              <li>Sepak Bola</li>
+            </ul>
+          </section>
 
         <section class="kartu">
           <h2>Cita-cita</h2>
@@ -84,44 +101,78 @@
         </section>
       </div>
 
-      <section class="kartu">
-        <h2>Jadwal Belajar</h2>
-        <table>
-          <caption>Jadwal belajar mandiri setiap minggu</caption>
-          <thead>
-            <tr>
-              <th>Hari</th>
-              <th>Waktu</th>
-              <th>Kegiatan</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Senin</td>
-              <td>19.00 - 20.00</td>
-              <td>Membaca ulang modul</td>
-            </tr>
-            <tr>
-              <td>Rabu</td>
-              <td>19.00 - 21.00</td>
-              <td>Mengerjakan tugas praktik</td>
-            </tr>
-            <tr>
-              <td>Jumat</td>
-              <td>19.30 - 20.30</td>
-              <td>Merekam video dan menulis laporan</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
-  </main>
+        <section class="kartu">
+          <h2>Jadwal Belajar</h2>
+          <table>
+            <caption>
+              Jadwal belajar mandiri setiap minggu
+            </caption>
+            <thead>
+              <tr>
+                <th>Hari</th>
+                <th>Waktu</th>
+                <th>Kegiatan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Senin</td>
+                <td>07.00 - 15.00</td>
+                <td>Sekolah</td>
+              </tr>
+              <tr>
+                <td>Selasa</td>
+                <td>19.30 - 20.30</td>
+                <td>Merekam video dan menulis laporan</td>
+              </tr>
+              <tr>
+                <td>Rabu</td>
+                <td>19.00 - 21.00</td>
+                <td>Mengerjakan tugas praktik</td>
+              </tr>
+              <tr>
+                <td>Kamis</td>
+                <td>19.30 - 20.30</td>
+                <td>Membaca ulang modul</td>
+              </tr>
+              <tr>
+                <td>Jumat</td>
+                <td>19.30 - 20.30</td>
+                <td>Latihan coding</td>
+              </tr>
+              <tr>
+                <td>Sabtu</td>
+                <td>20.00 - 21.00</td>
+                <td>Mengerjakan PR Sekolah</td>
+              </tr>
+              <tr>
+                <td>Minggu</td>
+                <td>19.00 - 20.00</td>
+                <td>Review & perbaikan</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
 
-  <footer>
-    <p>Kontak: <a href="mailto:arjuna.prananda46@smk.belajar.id">arjuna.prananda46@smk.belajar.id</a> |
-      <a href="https://github.com/" target="_blank">GitHub</a> |
-      <a href="https://www.youtube.com/" target="_blank">YouTube</a></p>
-    <p>&copy; 2026 arjuna. Dibuat di Kelas Industri UBIG.</p>
-  </footer>
- <body>
+    <footer>
+      <p>
+        Kontak:
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=anggerraditya010@gmail.com"
+          target="_blank"
+          >anggerraditya010@gmail.com</a
+        >
+        |
+        <a href="https://github.com/Raditya-creator" target="_blank">GitHub</a>
+        |
+        <a href="https://www.youtube.com/@Angger.cod3" target="_blank"
+          >YouTube</a
+        >
+      </p>
+      <p>&copy; 2026 Angger Raditya Permata. Dibuat di Kelas Industri UBIG.</p>
+    </footer>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>

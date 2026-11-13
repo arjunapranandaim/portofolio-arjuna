@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Gaya portofolio Andi Pratama
+=======
+/* Gaya portofolio arjuna prananda imam maulana
+>>>>>>> 9b65052 (feat: memperbarui halaman portofolio)
    Palet: #1D3557 (utama), #E63946 (aksen), #F1FAEE (latar)
    Huruf: Poppins (judul), Inter (isi)
    Tata letak: mobile first, titik ubah 768px (tablet) dan 1024px (laptop) */
@@ -262,3 +266,70 @@ footer a {
     font-size: 2.75rem;
   }
 }
+<<<<<<< HEAD
+=======
+
+/* 10. Tombol tema, filter, dan label kategori */
+.tombol-tema {
+  padding: 0.5rem 0.9rem;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+.filter,
+.filter-proyek {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tombol-filter {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--warna-garis);
+  background-color: var(--warna-kartu);
+  color: var(--warna-judul);
+}
+.tombol-filter.aktif {
+  background-color: var(--warna-aksen);
+  border-color: var(--warna-aksen);
+  color: #ffffff;
+}
+
+.label {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--warna-latar);
+  color: var(--warna-judul);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 11. Tema gelap: isi variabel diganti saat body memiliki class gelap */
+body.gelap {
+  --warna-utama: #0b1526;
+  --warna-judul: #a8dadc;
+  --warna-tautan: #ff8a8a;
+  --warna-latar: #121a24;
+  --warna-teks: #e3e8ee;
+  --warna-kartu: #1c2836;
+  --warna-garis: #34465a;
+}
+body.gelap .tombol-filter.aktif {
+  background-color: #ff8a8a;
+  border-color: #ff8a8a;
+  color: #0b1526;
+}
+
+#hasil {
+  background-color: var(--warna-kartu);
+  color: var(--warna-teks);
+  border: 1px solid var(--warna-garis);
+}
+
+body.gelap #hasil {
+  background-color: var(--warna-kartu);
+  color: var(--warna-teks);
+}
+>>>>>>> 9b65052 (feat: memperbarui halaman portofolio)
