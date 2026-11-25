@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andi Pratama | Proyek</title>
+  <title>Arjuna | Proyek</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container navbar">
-      <h1>Andi Pratama</h1>
+      <h1>Arjuna prananda imam maulana</h1>
       <nav class="menu-laptop">
         <ul>
           <li><a href="index.html">Beranda</a></li>
@@ -40,28 +41,43 @@
     <div class="container">
       <section>
         <h2>Proyek Saya</h2>
+        <div class="filter-proyek">
+          <button class="filter-btn" data-filter="semua">Semua</button>
+          <button class="filter-btn" data-filter="HTML">HTML</button>
+          <button class="filter-btn" data-filter="CSS">CSS</button>
+          <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+        </div>
         <p>Kumpulan hasil belajar saya di Kelas Industri UBIG.</p>
 
-        <div class="daftar-kartu">
-          <article class="kartu">
+        <div class="daftar-kartu" id="daftar-proyek">
+          <p id="jumlah-proyek"></p>
+          <article class="kartu" data-kategori="HTML">
             <h3>Halaman Profil Pertama</h3>
             <img src="img/proyek-profil.png" alt="Tangkapan layar halaman profil Andi Pratama" width="280">
             <p>Halaman web pertama saya, berisi perkenalan, foto, hobi, cita-cita, keahlian, dan kontak. Dibuat dengan HTML dasar di Minggu 01.</p>
           </article>
 
-          <article class="kartu">
+          <article class="kartu" data-kategori="HTML">
             <h3>Form Kontak</h3>
             <img src="img/proyek-kontak.png" alt="Tangkapan layar form kontak berisi nama, email, nomor HP, keperluan, dan pesan" width="280">
             <p>Form untuk menghubungi saya. Setiap isian memiliki label dan wajib diisi, sehingga browser menolak form yang masih kosong.</p>
           </article>
 
-          <article class="kartu">
+          <article class="kartu" data-kategori="HTML">
             <h3>Tabel Jadwal Belajar</h3>
             <img src="img/proyek-jadwal.png" alt="Tangkapan layar tabel jadwal belajar mandiri" width="280">
             <p>Tabel berisi jadwal belajar mandiri saya setiap minggu, disusun dengan thead dan tbody.</p>
           </article>
         </div>
       </section>
+      <section class="kartu">
+          <h2>Repositori GitHub Saya</h2>
+          <p>
+            Daftar ini diambil langsung dari GitHub setiap kali halaman dibuka.
+          </p>
+          <p id="status-repo"></p>
+          <ul id="daftar-repo"></ul>
+        </section>
 
       <!-- FAQ dengan details dan summary -->
       <section class="kartu">
